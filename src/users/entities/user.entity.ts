@@ -13,11 +13,11 @@ export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  userName: string;
+  @Column({ nullable: true })
+  userName: string | null;
 
   @Column()
-  phoneNumber: number;
+  phone: string;
 
   @Column()
   password: string;
