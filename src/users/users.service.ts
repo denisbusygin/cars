@@ -33,6 +33,7 @@ export class UsersService {
     const user = await this.userRepository.save({
       email: createUserDto.email,
       phone: createUserDto.phone,
+      userName: createUserDto.userName,
       password: await argon2.hash(createUserDto.password),
     });
 
