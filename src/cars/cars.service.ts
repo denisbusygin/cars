@@ -52,7 +52,7 @@ export class CarsService {
 
   async findOneByUserId(user_id: number) {
     const cars = await this.carRepository.find({
-      where: { user: { id: user_id } }, // или может потребоваться изменить на { user: { id: user_id }}, в зависимости от структуры вашей базы данных и связей между сущностями
+      where: { user: { id: user_id } },
       relations: ['user'],
     });
 
